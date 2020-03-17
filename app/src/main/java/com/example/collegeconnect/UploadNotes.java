@@ -122,7 +122,7 @@ public class UploadNotes extends AppCompatActivity {
         if (requestCode == PICK_PDF_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
             //if a file is selected
             if (data.getData() != null) {
-                editTextFilename.setText(data.getData().getLastPathSegment());
+                editTextFilename.setText(data.getData().getPath());
                 //uploading the file
                 findViewById(R.id.button6).setOnClickListener(new View.OnClickListener() {
                     @Override
